@@ -58,9 +58,9 @@ gulp.task('sprite:build', function () {
                 $('[fill]').removeAttr('fill');
                 $('[style]').removeAttr('style');
             },
-/*            parserOptions: {
+            parserOptions: {
                 xmlMode: true
-            }*/
+            }
         }))
         .pipe(replace('&gt;', '>')) // cheerio plugin create unnecessary string '>', so replace it.
         .pipe(svgSprite({ // build svg sprite

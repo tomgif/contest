@@ -1,9 +1,13 @@
 *, *:before, *:after {
 	box-sizing: inherit}
 
-html {
-	font-size: 62.5%;
-	box-sizing: border-box}
+html {box-sizing: border-box}
+
+@each $res in 320, 640, 720, 960, 1024, 1200, 1366, 1440, 1600, 1920 {
+	@media all and (min-width: #{$res}px) {
+		html {font-size: #{$res / 1920 * 10 / 16 * 100 + '%'} }
+	}
+}
 
 body {
 	font-size: 200%}
@@ -26,9 +30,7 @@ body {
 
 .logo {
 	& &__link {
-		&:hover .logo {
-			&__content {fill: #cfaa6b}
-		}
+		&:hover .logo__content {fill: #cfaa6b}
 	}
 
 	& &__icon {
@@ -38,6 +40,7 @@ body {
 	& &__background {fill: #262626}
 	& &__content {
 		fill: #fff;
+		fill-rule: evenodd;
 		transition: fill .4s ease}
 }
 
@@ -60,11 +63,116 @@ body {
 
 .container {
 	margin: 0 auto;
-	padding: 0 22.5em;
+	padding: 0 22.5em}
+
+.icon {
+	height: 60px;
+	margin: 2em;
+	fill: none;
+	stroke: #cfaa6b;
+	stroke-width: 2;
+	transition: stroke .3s ease;
+	cursor: pointer;
+
+	&--barrel {width: 58px}
+	&--beer {width: 54px}
+	&--malt {width: 27px}
+	&--ingridients {width: 60px}
+	&--age {width: 64px}
+
+	&:hover {stroke: #ff2630}
+}
+.promo {
+	width: 100%;
+
+	& &-icons {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between}
+
+	& &-icon {text-align: center}
 }
 
-@each $res in 320, 640, 720, 960, 1024, 1200, 1366, 1440, 1600, 1920 {
-	@media all and (min-width: #{$res}px) {
-		html {font-size: #{$res / 1920 * 10 / 16 * 100 + '%'} }
+
+.contact-form {
+	padding: 5em 0;
+
+	&__line {
+		@include clearfix();
+		text-align: center;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between}
+
+	&__control {
+		padding: 1em;
+
+		input {
+			outline: 0;
+			width: 100%;
+			padding: 1em 2.5em;
+			box-shadow: 0 0 0 1px #707070;
+			border: 3px solid #707070;
+			transition: box-shadow .5s ease, border-color .3s ease;
+
+			&:focus, &:active {
+				box-shadow: 0 0 0 1px #707070;
+				border: 3px solid #fff;
+			}
+		}
 	}
+
+	&__button {
+		width: 12em;
+		height: 3em;
+		border: 0;
+		color: #fff;
+		text-transform: uppercase;
+		background-color: #ff2630;
+		margin: 2.5em auto;
+		cursor: pointer;
+		transition: background-color .3s ease;
+
+		&:hover, &:active {background-color: #dc1821}
+	}
+}
+
+.slug {
+	font-size: 3rem;
+/*     animation-name: example;
+animation-duration: 1s;
+animation-timing-function: linear;
+animation-iteration-count: infinite; */
+	color: #262626}
+
+.justify {
+	margin-left: -1em;
+	margin-right: -1em}
+
+.bottle {
+	width: 38px;
+	height: 142px;
+	animation-name: bottles;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+
+	@for $i from 1 through 11 {
+		&:nth-child(#{$i}) {
+			fill: #352c26;
+			animation-delay: #{.5 * $i + 's'};
+		}
+	}
+}
+
+@keyframes bottles {
+   0%		{fill: #352c26}
+   12.5%	{fill: #473a2b}
+   25%		{fill: #6b553a}
+   37.5%	{fill: #8f7146}
+   50%		{fill: #b38d53}
+   62.5%	{fill: #cfaa6b}
+   75%		{fill: #b38d53}
+   87.5%	{fill: #8f7146}
+   100%		{fill: #352C26}
 }

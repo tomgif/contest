@@ -19,33 +19,57 @@ html(lang="ru")
 				.banner__content.container
 					p Ваш шанс выиграть годовой запас пива от GoldenBottle!
 			.content.container
+				.bottles
+					- var n = 0
+					while n < 11
+						svg.bottle(xmlns="http://www.w3.org/2000/svg")
+							use(xlink:href="#icon-bottle")
+						- n++
 				.contact-form
-					.contact-form__line
+					.contact-form__line.clearfix.justify
 						.contact-form__control
-							input(type="text", name="name", placeholder="Имя Фамилия")
+							label(for="")
+							input#name(type="text", name="name", placeholder="Имя Фамилия")
 						.contact-form__control
-							input.contact-form__control(type="text", name="phone", placeholder="+7")
+							input#phone.contact-form__control(type="text", name="phone", placeholder="+7")
 						.contact-form__control
-							input.contact-form__control(type="text", placeholder="Имя Фамилия")
+							input#field.contact-form__control(type="text", name="field", placeholder="Имя Фамилия")
 					.contact-form__line.slug
 						p В чем отличие настоящего шотландского стаута от обычного темного пива?
-					.contact-form__line.promo
-						.promo__icons
-							.promo-icon
-								.promo-icon__item
-								.promo-icon__content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, fuga! Suscipit tempore possimus omnis voluptate quas, adipisci, ab soluta necessitatibus.
-							.promo-icon
-								.promo-icon__item
-								.promo-icon__content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi odio, nihil eveniet, corporis provident id dolore sunt aut laboriosam?
-							.promo-icon
-								.promo-icon__item
-								.promo-icon__content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis pariatur consequuntur fuga impedit cupiditate libero quae ducimus quod repudiandae quasi.
-							.promo-icon
-								.promo-icon__item Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis pariatur consequuntur fuga impedit cupiditate libero quae ducimus quod repudiandae quasi.
-								.promo-icon__content
-							.promo-icon
-								.promo-icon__item
-								.promo-icon__content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis pariatur consequuntur fuga impedit cupiditate libero quae ducimus quod repudiandae quasi.
+					.contact-form__line.clearfix
+						.promo
+							.promo-icons
+								.promo-icon
+									.promo-icon__item
+										svg.icon.icon--barrel(xmlns="http://www.w3.org/2000/svg")
+											use.icon__content(xlink:href="#icon-barrel")
+										.promo-icon__title Крепость
+								.promo-icon
+									.promo-icon__item
+										svg.icon.icon--beer(xmlns="http://www.w3.org/2000/svg")
+											use.icon__content(xlink:href="#icon-beer")
+										.promo-icon__title Вкус
+								.promo-icon
+									.promo-icon__item
+										svg.icon.icon--malt(xmlns="http://www.w3.org/2000/svg")
+											use.icon__content(xlink:href="#icon-malt")
+										.promo-icon__title Цвет
+								.promo-icon
+									.promo-icon__item 
+										svg.icon.icon--ingridients(xmlns="http://www.w3.org/2000/svg")
+											use.icon__content(xlink:href="#icon-ingridients")
+										.promo-icon__title Ингридиенты
+								.promo-icon
+									.promo-icon__item
+										svg.icon.icon--age(xmlns="http://www.w3.org/2000/svg")
+											use.icon__content(xlink:href="#icon-age")
+										.promo-icon__title Возраст
+							.promo-content.clearfix
+								.promo-icon__content(style="display: none;") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, fuga! Suscipit tempore possimus omnis voluptate quas, adipisci, ab soluta necessitatibus.
+								.promo-icon__content(style="display: none;") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi odio, nihil eveniet, corporis provident id dolore sunt aut laboriosam?
+								.promo-icon__content(style="display: none;") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis pariatur consequuntur fuga impedit cupiditate libero quae ducimus quod repudiandae quasi.
+								.promo-icon__content(style="display: none;") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis pariatur consequuntur fuga impedit cupiditate libero quae ducimus quod repudiandae quasi.
+								.promo-icon__content(style="display: none;") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis pariatur consequuntur fuga impedit cupiditate libero quae ducimus quod repudiandae quasi.
 					.contact-form__line
-						button Отправить
+						button.contact-form__button Отправить
 		script(src="js/main.js")
