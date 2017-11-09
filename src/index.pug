@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		title Golden Bottle
+		link(rel="stylesheet", href="css/main.css")
+	body.page
+		include include/sprite.svg
+		.page-wrapper
+			header.page-header
+				.page-header__inner
+					.logo
+						a.logo__link(href="/")
+							svg.logo__icon(xmlns="http://www.w3.org/2000/svg")
+								use.logo__background(xlink:href="#icon-logo-bg")
+								use.logo__content(xlink:href="#icon-logo")
+			.banner
+				img.banner__image(src="img/banner.jpg", alt="Golden Bottle")
+				.banner__content.container
+					p Ваш шанс выиграть годовой запас пива от GoldenBottle!
+			.content.container
+				.contact-form
+					.contact-form__line
+						.contact-form__control
+							input(type="text", name="name", placeholder="Имя Фамилия")
+						.contact-form__control
+							input.contact-form__control(type="text", name="phone", placeholder="+7")
+						.contact-form__control
+							input.contact-form__control(type="text", placeholder="Имя Фамилия")
+					.contact-form__line.slug
+						p В чем отличие настоящего шотландского стаута от обычного темного пива?
+					.contact-form__line.promo
+						.promo__icons
+							.promo-icon
+								.promo-icon__item
+								.promo-icon__content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, fuga! Suscipit tempore possimus omnis voluptate quas, adipisci, ab soluta necessitatibus.
+							.promo-icon
+								.promo-icon__item
+								.promo-icon__content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi odio, nihil eveniet, corporis provident id dolore sunt aut laboriosam?
+							.promo-icon
+								.promo-icon__item
+								.promo-icon__content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis pariatur consequuntur fuga impedit cupiditate libero quae ducimus quod repudiandae quasi.
+							.promo-icon
+								.promo-icon__item Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis pariatur consequuntur fuga impedit cupiditate libero quae ducimus quod repudiandae quasi.
+								.promo-icon__content
+							.promo-icon
+								.promo-icon__item
+								.promo-icon__content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis pariatur consequuntur fuga impedit cupiditate libero quae ducimus quod repudiandae quasi.
+					.contact-form__line
+						button Отправить
+		script(src="js/main.js")

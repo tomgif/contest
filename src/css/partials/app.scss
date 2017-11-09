@@ -1,0 +1,70 @@
+*, *:before, *:after {
+	box-sizing: inherit}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box}
+
+body {
+	font-size: 200%}
+
+.page-header {
+	width: 100%;
+	background-color: #cfaa6b;
+	padding-top: 50px;
+	position: relative;
+	z-index: 10;
+	
+	&__inner {
+		height: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		background-color: #262626}
+}
+
+.logo {
+	& &__link {
+		&:hover .logo {
+			&__content {fill: #cfaa6b}
+		}
+	}
+
+	& &__icon {
+		width: 160px;
+		height: 160px}
+
+	& &__background {fill: #262626}
+	& &__content {
+		fill: #fff;
+		transition: fill .4s ease}
+}
+
+.banner {
+	position: relative;
+
+	& &__image {width: 100%}
+
+	& &__content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding-top: 5em;
+		p {
+			color: #fff;
+			text-align: center;
+			font-size: 7rem}
+	}
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 22.5em;
+}
+
+@each $res in 320, 640, 720, 960, 1024, 1200, 1366, 1440, 1600, 1920 {
+	@media all and (min-width: #{$res}px) {
+		html {font-size: #{$res / 1920 * 10 / 16 * 100 + '%'} }
+	}
+}
