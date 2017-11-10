@@ -1,20 +1,48 @@
+$valid: #cfaa6b;
+$error: #ff2630;
+
 *, *:before, *:after {
 	box-sizing: inherit}
 
-html {box-sizing: border-box}
+html {
+	font-family: 'Rubik';
+	box-sizing: border-box}
 
 @each $res in 320, 640, 720, 960, 1024, 1200, 1366, 1440, 1600, 1920 {
 	@media all and (min-width: #{$res}px) {
-		html {font-size: #{$res / 1920 * 10 / 16 * 100 + '%'} }
+		html {
+			font-size: #{$res / 1920 * 10 / 16 * 100 + '%'}
+		}
 	}
 }
 
 body {
 	font-size: 200%}
 
+.page-wrapper {
+	display: none;
+
+	&.is-loaded {
+		display: block}
+}
+
+.preloader {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+
+	&-wrapper {
+		background-color: #707070;
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		justify-content: center;
+		height: 100%}
+}
+
 .page-header {
 	width: 100%;
-	background-color: #cfaa6b;
+	background-color: $valid;
 	padding-top: 50px;
 	position: relative;
 	z-index: 10;
@@ -24,20 +52,31 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-
-		background-color: #262626}
+		background-color: #262626;
+		
+		@media all and (max-width: 640px) {
+			height: 50px}
+	}
 }
 
 .logo {
 	& &__link {
-		&:hover .logo__content {fill: #cfaa6b}
+		&:hover .logo__content {
+			fill: $valid}
 	}
 
 	& &__icon {
 		width: 160px;
-		height: 160px}
+		height: 160px;
+		
+		@media all and (max-width: 640px) {
+			width: 16rem;
+			height: 16rem}
+	}
 
-	& &__background {fill: #262626}
+	& &__background {
+		fill: #262626}
+
 	& &__content {
 		fill: #fff;
 		fill-rule: evenodd;
@@ -47,132 +86,266 @@ body {
 .banner {
 	position: relative;
 
-	& &__image {width: 100%}
+	& &__image {
+		width: 100%}
 
 	& &__content {
 		position: absolute;
 		top: 0;
 		left: 0;
 		padding-top: 5em;
+
+		@media all and (max-width: 640px) {
+			padding: 1rem}
+
 		p {
 			color: #fff;
 			text-align: center;
-			font-size: 7rem}
+			font-size: 6.5rem;
+			
+			@media all and (max-width: 640px) {
+				font-size: 10rem}
+		}
 	}
 }
 
 .container {
 	margin: 0 auto;
-	padding: 0 22.5em}
+	padding: 0 22.5em;
+
+	@media all and (max-width: 640px) {
+		padding: 0 5em}
+}
 
 .icon {
 	height: 60px;
 	margin: 2em;
 	fill: none;
-	stroke: #cfaa6b;
+	stroke: $valid;
 	stroke-width: 2;
 	transition: stroke .3s ease;
 	cursor: pointer;
 
-	&--barrel {width: 58px}
-	&--beer {width: 54px}
-	&--malt {width: 27px}
-	&--ingridients {width: 60px}
-	&--age {width: 64px}
+	@media all and (max-width: 640px) {
+		margin: 2em 0;
+		height: 6rem}
 
-	&:hover {stroke: #ff2630}
+	&--barrel {
+		width: 58px;
+
+		@media all and (max-width: 640px) {
+			width: 5.8rem}
+	}
+	&--beer {
+		width: 54px;
+
+		@media all and (max-width: 640px) {
+			width: 5.4rem}
+	}
+	&--malt {
+		width: 27px;
+
+		@media all and (max-width: 640px) {
+			width: 2.7rem}
+	}
+	&--ingridients {
+		width: 60px;
+
+		@media all and (max-width: 640px) {
+			width: 6rem}
+	}
+	&--age {
+		width: 64px;
+
+		@media all and (max-width: 640px) {
+			width: 6.4rem}
+	}
+
+	&:hover, .is-active & {
+		stroke: $error}
 }
+
 .promo {
 	width: 100%;
 
 	& &-icons {
 		display: flex;
 		flex-flow: row nowrap;
-		justify-content: space-between}
+		justify-content: space-between;
 
-	& &-icon {text-align: center}
+		@media all and (max-width: 640px) {
+			margin: 0;
+			font-size: 5rem}
+	}
+
+	& &-icon {
+		text-align: center}
 }
 
 
 .contact-form {
 	padding: 5em 0;
 
-	&__line {
+	@media all and (max-width: 640px) {
+		padding: 0}
+
+	& &__line {
 		@include clearfix();
 		text-align: center;
 		display: flex;
 		flex-flow: row nowrap;
-		justify-content: space-between}
+		justify-content: space-between;
+		
+		@media all and (max-width: 640px) {
+			flex-flow: column}
+	}
 
-	&__control {
+	& &__control {
 		padding: 1em;
+		position: relative;
+
+		@media all and (max-width: 640px) {
+			font-size: 7rem}
 
 		input {
 			outline: 0;
 			width: 100%;
 			padding: 1em 2.5em;
+			color: #262626;
 			box-shadow: 0 0 0 1px #707070;
 			border: 3px solid #707070;
 			transition: box-shadow .5s ease, border-color .3s ease;
 
-			&:focus, &:active {
-				box-shadow: 0 0 0 1px #707070;
-				border: 3px solid #fff;
-			}
+
+			&:focus, &:active, &:hover, &.error {
+				border: 3px solid #fff}
+
+			&:focus, &:active, &:hover {
+				box-shadow: 0 0 0 1px #707070}
+
+			&.error {
+				box-shadow: 0 0 0 1px $error}
+
+			&.valid {
+				border: 3px solid $valid;
+				box-shadow: 0 0 0 1px $valid}
+		}
+
+		label {
+			font-size: 1.5rem;
+			color: #707070;
+			display: block;
+			text-transform: uppercase;
+			padding: 1em;
+
+			@media all and (max-width: 640px) {
+				font-size: 7rem}
+
+			&.error {
+				position: absolute;
+				text-transform: none;
+				color: $error;
+				left: 0;
+				right: 0}
+
+				@media all and (max-width: 640px) {
+					bottom: -3rem;
+					display: none}
 		}
 	}
 
-	&__button {
+	& &__button {
 		width: 12em;
 		height: 3em;
 		border: 0;
 		color: #fff;
 		text-transform: uppercase;
-		background-color: #ff2630;
+		background-color: $error;
+		font-size: 1.6rem;
 		margin: 2.5em auto;
 		cursor: pointer;
 		transition: background-color .3s ease;
 
-		&:hover, &:active {background-color: #dc1821}
+		@media all and (max-width: 640px) {
+			font-size: 10rem}
+
+		&:hover, &:active {
+			background-color: #dc1821}
+
+		&.is-disabled {
+			background-color: #dadada;
+			color: #707070}
 	}
 }
 
 .slug {
-	font-size: 3rem;
-/*     animation-name: example;
-animation-duration: 1s;
-animation-timing-function: linear;
-animation-iteration-count: infinite; */
-	color: #262626}
+	font-size: 3.75rem;
+	color: #262626;
+
+	@media all and (max-width: 640px) {
+		font-size: 10rem;}
+}
 
 .justify {
 	margin-left: -1em;
 	margin-right: -1em}
 
 .bottle {
-	width: 38px;
-	height: 142px;
+	width: 3.8rem;
+	height: 14.2rem;
 	animation-name: bottles;
-	animation-duration: 5s;
+	animation-duration: 1s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 
-	@for $i from 1 through 11 {
+	$colors: #352c26, #473a2b, #6b553a, #8f7146, #b38d53, #cfaa6b, #b38d53, #8f7146, #6b553a, #473a2b, #352C26;	
+	@for $i from 1 through length($colors) {
 		&:nth-child(#{$i}) {
-			fill: #352c26;
-			animation-delay: #{.5 * $i + 's'};
+			fill: nth($colors, $i);
+			animation-delay: #{.09 * $i + 's'}
 		}
 	}
 }
 
 @keyframes bottles {
-   0%		{fill: #352c26}
-   12.5%	{fill: #473a2b}
-   25%		{fill: #6b553a}
-   37.5%	{fill: #8f7146}
-   50%		{fill: #b38d53}
-   62.5%	{fill: #cfaa6b}
-   75%		{fill: #b38d53}
-   87.5%	{fill: #8f7146}
-   100%		{fill: #352C26}
+   0%, 100% {
+   	fill: #352c26}
+   10%, 90% {
+   	fill: #473a2b}
+   20%, 80% {
+   	fill: #6b553a}
+   30%, 70% {
+   	fill: #8f7146}
+   40%, 60% {
+   	fill: #b38d53}
+   50% {
+   	fill: #cfaa6b}
+}
+
+.tabs {
+	position: relative;
+	padding-bottom: 10rem;
+
+	@media all and (max-width: 640px) {
+		padding-bottom: 20rem;}
+
+	& &__caption {
+		padding: 0;
+		margin: 0;
+		list-style: none}
+
+	& &__content {
+		position: absolute;
+		opacity: 0;
+		margin: 5rem 6rem 0;
+		font-weight: bold;
+		transition: opacity .3s ease;
+
+		@media all and (max-width: 640px) {
+			margin: 5rem 0;
+			font-size: 10rem}
+
+		&.is-active {
+			opacity: 1}
+	}
 }

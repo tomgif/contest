@@ -3,9 +3,39 @@ html(lang="ru")
 	head
 		meta(charset="UTF-8")
 		title Golden Bottle
+
+		link(rel="apple-touch-icon", sizes="57x57", href="img/apple-icon-57x57.png")
+		link(rel="apple-touch-icon" sizes="60x60", href="img/apple-icon-60x60.png")
+		link(rel="apple-touch-icon", sizes="72x72", href="img/apple-icon-72x72.png")
+		link(rel="apple-touch-icon", sizes="76x76", href="img/apple-icon-76x76.png")
+		link(rel="apple-touch-icon", sizes="114x114", href="img/apple-icon-114x114.png")
+		link(rel="apple-touch-icon", sizes="120x120", href="img/apple-icon-120x120.png")
+		link(rel="apple-touch-icon", sizes="144x144", href="img/apple-icon-144x144.png")
+		link(rel="apple-touch-icon", sizes="152x152", href="img/apple-icon-152x152.png")
+		link(rel="apple-touch-icon", sizes="180x180", href="img/apple-icon-180x180.png")
+		link(rel="icon" type="image/png" sizes="192x192",  href="img/android-icon-192x192.png")
+		link(rel="icon" type="image/png", sizes="32x32", href="img/favicon-32x32.png")
+		link(rel="icon" type="image/png", sizes="96x96", href="img/favicon-96x96.png")
+		link(rel="icon" type="image/png", sizes="16x16", href="img/favicon-16x16.png")
+		//link(rel="manifest", href="img/manifest.json")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		meta(name="msapplication-TileColor", content="#cfaa6b")
+		meta(name="msapplication-TileImage", content="img/ms-icon-144x144.png")
+		meta(name="theme-color", content="#cfaa6b")
+
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Rubik")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Rubik+Mono+One")
 		link(rel="stylesheet", href="css/main.css")
-	body.page
+	body.page.is-loaded
 		include include/sprite.svg
+		.preloader
+			.preloader-wrapper
+				.bottles
+					- var n = 0
+					while n < 11
+						svg.bottle(xmlns="http://www.w3.org/2000/svg")
+							use(xlink:href="#icon-bottle")
+						- n++
 		.page-wrapper
 			header.page-header
 				.page-header__inner
@@ -19,57 +49,59 @@ html(lang="ru")
 				.banner__content.container
 					p Ваш шанс выиграть годовой запас пива от GoldenBottle!
 			.content.container
-				.bottles
-					- var n = 0
-					while n < 11
-						svg.bottle(xmlns="http://www.w3.org/2000/svg")
-							use(xlink:href="#icon-bottle")
-						- n++
-				.contact-form
+				form.contact-form
 					.contact-form__line.clearfix.justify
 						.contact-form__control
-							label(for="")
+							label(for="name") &nbsp;
 							input#name(type="text", name="name", placeholder="Имя Фамилия")
 						.contact-form__control
-							input#phone.contact-form__control(type="text", name="phone", placeholder="+7")
+							label(for="phone") Телефон
+							input#phone(type="text", name="phone", placeholder="+7")
 						.contact-form__control
-							input#field.contact-form__control(type="text", name="field", placeholder="Имя Фамилия")
+							label(for="field") &nbsp;
+							input#field(type="text", name="field", placeholder="Имя Фамилия")
 					.contact-form__line.slug
 						p В чем отличие настоящего шотландского стаута от обычного темного пива?
 					.contact-form__line.clearfix
-						.promo
-							.promo-icons
-								.promo-icon
-									.promo-icon__item
+						.promo.tabs
+							ul.promo-icons.tabs__caption
+								li.promo-icon
+									label.promo-icon__item#barrel
+										input#barrel(type="radio", name="question", value="barrel", style="display:none;")
 										svg.icon.icon--barrel(xmlns="http://www.w3.org/2000/svg")
 											use.icon__content(xlink:href="#icon-barrel")
 										.promo-icon__title Крепость
-								.promo-icon
-									.promo-icon__item
+								li.promo-icon
+									label.promo-icon__item#beer
+										input#beer(type="radio", name="question", value="beer", style="display:none;")
 										svg.icon.icon--beer(xmlns="http://www.w3.org/2000/svg")
 											use.icon__content(xlink:href="#icon-beer")
 										.promo-icon__title Вкус
-								.promo-icon
-									.promo-icon__item
+								li.promo-icon
+									label.promo-icon__item#malt
+										input#malt(type="radio", name="question", value="malt", style="display:none;")
 										svg.icon.icon--malt(xmlns="http://www.w3.org/2000/svg")
 											use.icon__content(xlink:href="#icon-malt")
 										.promo-icon__title Цвет
-								.promo-icon
-									.promo-icon__item 
+								li.promo-icon
+									label.promo-icon__item#ingridients
+										input#ingridients(type="radio", name="question", value="ingridients", style="display:none;")
 										svg.icon.icon--ingridients(xmlns="http://www.w3.org/2000/svg")
 											use.icon__content(xlink:href="#icon-ingridients")
 										.promo-icon__title Ингридиенты
-								.promo-icon
-									.promo-icon__item
+								li.promo-icon
+									label.promo-icon__item#age
+										input#age(type="radio", name="question", value="age", style="display:none;")
 										svg.icon.icon--age(xmlns="http://www.w3.org/2000/svg")
 											use.icon__content(xlink:href="#icon-age")
 										.promo-icon__title Возраст
-							.promo-content.clearfix
-								.promo-icon__content(style="display: none;") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, fuga! Suscipit tempore possimus omnis voluptate quas, adipisci, ab soluta necessitatibus.
-								.promo-icon__content(style="display: none;") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic modi odio, nihil eveniet, corporis provident id dolore sunt aut laboriosam?
-								.promo-icon__content(style="display: none;") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis pariatur consequuntur fuga impedit cupiditate libero quae ducimus quod repudiandae quasi.
-								.promo-icon__content(style="display: none;") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis pariatur consequuntur fuga impedit cupiditate libero quae ducimus quod repudiandae quasi.
-								.promo-icon__content(style="display: none;") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis pariatur consequuntur fuga impedit cupiditate libero quae ducimus quod repudiandae quasi.
+							.promo-icon__content.tabs__content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis nulla fugiat eos nobis debitis ipsam incidunt iste.
+							.promo-icon__content.tabs__content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam culpa, libero enim ducimus illo sequi autem natus?
+							.promo-icon__content.tabs__content Настоящий солод для шотландского стаута проходит три стадии обработки, после которых вкусовые качества напитка получаются совершенно бесподобными!
+							.promo-icon__content.tabs__content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eos illum voluptates minima reiciendis nulla voluptas, accusamus.
+							.promo-icon__content.tabs__content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga minima praesentium vero at, minus sequi dolorem. Corrupti!
 					.contact-form__line
-						button.contact-form__button Отправить
+						button.contact-form__button.submit-button.is-disabled(disabled="disable") Отправить
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js")
 		script(src="js/main.js")
