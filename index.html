@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Golden Bottle</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"/>
+    <!--link(rel="manifest", href="img/manifest.json")-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="msapplication-TileColor" content="#cfaa6b"/>
+    <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png"/>
+    <meta name="theme-color" content="#cfaa6b"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik+Mono+One"/>
+    <link rel="stylesheet" href="css/main.css"/>
+  </head>
+  <body class="page is-loaded"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
+	
+		<symbol id="icon-age" viewBox="0 0 64 51">
+			<path d="M19.444 48.023c3.556.38 8.656.584 12.474.588 3.836.003 8.955-.194 12.526-.572M13.89 2.954C8.736 3.893 4.043 5.222 0 6.858v36.238c4.043 1.641 8.736 2.978 13.889 3.925M44.444 1.978c-3.555-.381-8.655-.585-12.473-.59-3.836-.002-8.956.195-12.527.573M50 47.046c5.153-.939 9.846-2.268 13.889-3.904V6.904C59.846 5.263 55.153 3.927 50 2.981m-30.556 31.5c3.561.154 8.67.237 12.488.242 3.832.002 8.946-.075 12.512-.225"></path><path d="M13.889 15.896c-5.174.374-9.875.906-13.889 1.562v15.033c4.017.663 8.717 1.203 13.89 1.585M44.444 15.52c-3.56-.156-8.664-.239-12.487-.242-3.827-.004-8.943.074-12.513.224m30.557 18.6c5.152-.375 9.845-.905 13.888-1.56V17.508c-4.043-.662-8.736-1.201-13.889-1.583"></path><path d="M13.889 50h5.555V0H13.89v50zm30.555 0H50V0h-5.556v50z"></path>
+		</symbol>
+	
+		<symbol id="icon-barrel" viewBox="0 0 58 60">
+			<path d="M50.87 28.696c0 12.246-9.928 22.174-22.174 22.174-12.247 0-22.174-9.928-22.174-22.174 0-12.247 9.927-22.174 22.174-22.174 12.246 0 22.174 9.927 22.174 22.174z"></path><path d="M57.39 28.695c0 15.848-12.848 28.695-28.695 28.695S0 44.542 0 28.695 12.848 0 28.695 0 57.39 12.848 57.39 28.695zM19.565 7.826v41.74m18.261-41.74v41.74M28.696 0v6.522M50.87 28.696h6.521m-52.174 0H0M28.696 50.87v6.521m20.87-46.956l-3.914 3.913M7.826 10.435l3.913 3.913m-1.304 35.217l3.913-3.913m32.609 3.913l-3.913-3.913"></path><path d="M32.609 39.13a3.913 3.913 0 1 1-7.826 0 3.913 3.913 0 0 1 7.826 0zM14.348 53.478L9.13 60H1.304l5.218-13.043m36.522 6.521L48.26 60h7.826L50.87 46.957"></path>
+		</symbol>
+	
+		<symbol id="icon-beer" viewBox="0 0 54 60">
+			<path d="M19.09 27.273v20.454m6.82-20.454v20.454m6.817-20.454v20.454m.877-43.307c-1.36 1.21-1.812 2.307-2.152 3.738M6.818 9.545c1.537 0 2.955.509 4.095 1.367"></path><path d="M8.182 42.273v9.545l-1.848 3.697a2.728 2.728 0 0 0 .511 3.149L8.182 60h32.727l1.336-1.336a2.73 2.73 0 0 0 .512-3.149l-1.848-3.697v-2.727h2.727c.786 0 1.538-.312 2.095-.867l4.655-4.656a9.547 9.547 0 0 0 2.795-6.75v-9.545a4.09 4.09 0 0 0-4.09-4.091h-8.182v-5.455c2.727-1.25 4.715-6.998 2.727-10.909-1.12-2.206-4.943-4.773-9.982-2.386a8.16 8.16 0 0 0-11.922-.895A8.168 8.168 0 0 0 15.012 0c-2.282-.003-8.96 1.28-8.194 9.545-3.935.594-6.817 4.082-6.817 8.182 0 3.027 1.363 5.67 4.09 7.086v13.369a4.09 4.09 0 1 0 8.182 0V24.545a6.819 6.819 0 0 1 6.818-6.818h21.818m-2.727 36.818H10.909"></path><path d="M40.91 28.637v15h1.363l4.655-4.656c.512-.511.8-1.205.8-1.93v-7.05c0-.754-.612-1.365-1.364-1.365h-5.455z"></path>
+		</symbol>
+	
+		<symbol id="icon-bottle" viewBox="0 0 39 142">
+			<path d="M34.338 60.057l-3.513-6.587a5.352 5.352 0 0 1-.603-1.976L25.91 8.996h-.091a.522.522 0 0 0 .485-.738l-.902-1.942a.514.514 0 0 1 .14-.613c.378-.315.15-.92-.345-.92h1.558L26.03 1.79A1.427 1.427 0 0 0 24.636.71H13.358a1.42 1.42 0 0 0-1.387 1.074l-.727 3h1.49c-.49 0-.72.59-.357.909l.086.076c.174.153.225.4.126.607l-.892 1.878a.522.522 0 0 0 .483.742L8.245 51.89a5.167 5.167 0 0 1-.592 1.924l-3.932 7.303a31.36 31.36 0 0 0-3.76 14.875v56.735c0 4.729 3.915 8.562 8.744 8.562h20.448c4.906 0 8.884-3.895 8.884-8.7V74.822a31.36 31.36 0 0 0-3.7-14.765"></path>
+		</symbol>
+	
+		<symbol id="icon-ingridients" viewBox="0 0 60 60">
+			<path d="M1 52h13m8.464-52v11.74s-.33 8.151 0 7.825V30L35.68 40.435v11.739L37 53.478V60H0v-6.522l1.321-1.304v-11.74L14.536 30V9.13M36 52h-7m30-5H46m-5.375 8H60v-6.571l-1.292-1.315v-9.302a5.296 5.296 0 0 0-1.938-4.105l-10.978-8.936V18.2c0-5.081-4.048-9.2-9.042-9.2H29"></path><path d="M30 31l8-6.364v-5.09C38 18.14 36.805 17 35.333 17H22m-7 18l-7 5m31-11l-4 4"></path>
+		</symbol>
+	
+		<symbol id="icon-logo" viewBox="0 0 160 160">
+			<path d="M111.423 34.164c-1.018-.7-1.903-.547-2.65.458a60.696 60.696 0 0 0-2.408 3.51c-.4.64-.545 1.197-.445 1.671.099.472.403.884.912 1.234.524.358 1.024.534 1.504.53.478-.006.902-.277 1.27-.814l-.97-.666a.638.638 0 0 1-.277-.433.653.653 0 0 1 .101-.505l1.573-2.294c.103-.15.248-.244.434-.28s.354 0 .505.104l5.677 3.896a.638.638 0 0 1 .28.435.646.646 0 0 1-.106.507l-1.84 2.685c-.643.936-1.377 1.634-2.21 2.095a6.137 6.137 0 0 1-2.684.77c-.956.052-1.95-.097-2.982-.45-1.032-.355-2.07-.893-3.118-1.61s-1.907-1.484-2.586-2.291c-.68-.812-1.156-1.656-1.436-2.536a5.885 5.885 0 0 1-.192-2.729c.147-.94.534-1.906 1.152-2.898.36-.584.766-1.207 1.221-1.865a45.08 45.08 0 0 1 1.328-1.853c.664-.88 1.403-1.546 2.218-1.998a5.807 5.807 0 0 1 2.6-.739c.92-.037 1.873.118 2.869.466.995.35 2.002.874 3.02 1.571 1.086.748 1.982 1.545 2.688 2.392.703.848 1.214 1.689 1.533 2.525.314.836.453 1.648.408 2.437a4.287 4.287 0 0 1-.685 2.128.524.524 0 0 1-.354.226.527.527 0 0 1-.412-.085l-4.562-3.13c-.275-.189-.422-.402-.443-.638a6.66 6.66 0 0 1-.006-.323c0-.133-.029-.284-.085-.453a1.84 1.84 0 0 0-.277-.524 2.26 2.26 0 0 0-.565-.526"></path><path fill-rule="evenodd" d="M128.86 62.046a47.417 47.417 0 0 0 1.916-1.14c.933-.587 1.667-1.272 2.201-2.052a6.276 6.276 0 0 0 1.03-2.555c.151-.921.11-1.894-.126-2.921s-.654-2.072-1.254-3.132c-.608-1.077-1.289-1.975-2.042-2.7-.755-.724-1.566-1.258-2.43-1.602a6.239 6.239 0 0 0-2.717-.433c-.946.056-1.912.334-2.897.832-.64.323-1.295.675-1.963 1.054-.666.377-1.291.75-1.87 1.114-.948.596-1.689 1.283-2.216 2.06a6.048 6.048 0 0 0-.996 2.536c-.136.913-.082 1.873.164 2.886.246 1.012.672 2.053 1.28 3.13.6 1.062 1.27 1.96 2.016 2.701.745.74 1.543 1.286 2.393 1.638.85.354 1.747.503 2.686.453.937-.054 1.908-.331 2.905-.838a46.86 46.86 0 0 0 1.92-1.031zm-7.893-6.712c.124-.445.482-.853 1.076-1.227a59.389 59.389 0 0 1 3.66-2.07c.624-.317 1.162-.41 1.611-.28.447.13.803.429 1.066.892.263.466.335.924.215 1.375-.118.451-.474.863-1.07 1.238a58.5 58.5 0 0 1-3.66 2.072c-.627.315-1.162.412-1.603.29-.443-.124-.8-.425-1.072-.905-.27-.48-.345-.94-.223-1.385z"></path><path d="M128.19 82.28a.667.667 0 0 1-.154.493.653.653 0 0 1-.458.242l-3.763.344a.64.64 0 0 1-.493-.155.65.65 0 0 1-.242-.456l-1.15-12.57a.646.646 0 0 1 .157-.493.645.645 0 0 1 .455-.242l16.103-1.476a.657.657 0 0 1 .49.158c.145.12.226.27.243.455l.459 4.99a.655.655 0 0 1-.157.49.649.649 0 0 1-.456.242l-11.666 1.07.633 6.908z"></path><path fill-rule="evenodd" d="M135.487 102.148c.606-.853 1.097-1.832 1.475-2.938l2.322-6.83a.66.66 0 0 0-.038-.515.645.645 0 0 0-.385-.342l-15.31-5.21a.65.65 0 0 0-.515.035.662.662 0 0 0-.343.385l-2.359 6.948q-.583 1.708-.664 3.242c-.058 1.02.066 1.962.372 2.825a6.056 6.056 0 0 0 1.49 2.307c.687.672 1.585 1.225 2.69 1.656.31.122.608.232.89.329l.843.286.853.291c.291.098.608.197.945.294 1.074.313 2.088.402 3.042.27a6.279 6.279 0 0 0 2.607-.98c.784-.517 1.479-1.202 2.085-2.053zm-4.028-3.395c-.43.285-.985.329-1.66.136-.337-.097-.645-.19-.922-.275-.28-.085-.559-.176-.836-.271-.273-.096-.559-.195-.848-.303a60.77 60.77 0 0 1-.925-.354c-.65-.256-1.074-.614-1.258-1.078-.188-.46-.193-.95-.015-1.47l.524-1.544 7.345 2.5-.485 1.425c-.182.536-.488.948-.92 1.234z"></path><path d="M109.855 117.349a.641.641 0 0 1-.473.207.653.653 0 0 1-.48-.182l-2.558-2.435a.642.642 0 0 1-.207-.474.647.647 0 0 1 .182-.482l8.99-9.453a.64.64 0 0 1 .472-.207.659.659 0 0 1 .484.182l11.714 11.152a.65.65 0 0 1 .207.474.646.646 0 0 1-.184.483l-8.85 9.307a.636.636 0 0 1-.473.207.662.662 0 0 1-.484-.182l-2.555-2.432a.648.648 0 0 1-.207-.474.649.649 0 0 1 .182-.483l5.177-5.444-1.144-1.09-4.796 5.046a.637.637 0 0 1-.47.205.654.654 0 0 1-.486-.18l-2.357-2.244a.651.651 0 0 1-.204-.474.636.636 0 0 1 .182-.483l4.796-5.045-1.145-1.087-5.313 5.588zm-14.194 20.918a.66.66 0 0 1-.517-.008.653.653 0 0 1-.362-.369l-5.98-15.033a.64.64 0 0 1 .009-.516.66.66 0 0 1 .368-.362l3.677-1.464c.308-.124.56-.145.757-.06.195.085.331.158.408.216l6.291 4.368-2.323-5.84a.648.648 0 0 1 .01-.516.65.65 0 0 1 .369-.364l4.208-1.675a.635.635 0 0 1 .517.01.656.656 0 0 1 .362.367l5.98 15.034a.656.656 0 0 1-.013.515.644.644 0 0 1-.366.362l-3.675 1.464c-.31.122-.563.143-.757.058a2.124 2.124 0 0 1-.41-.213l-6.494-4.882 2.528 6.354a.647.647 0 0 1-.01.515.647.647 0 0 1-.368.362l-4.209 1.677zm-18.703-7.186a3.353 3.353 0 0 1-.453 1.316 3.549 3.549 0 0 1-.888 1.007 3.523 3.523 0 0 1-2.592.695 3.41 3.41 0 0 1-1.316-.453 3.587 3.587 0 0 1-1.006-.89 3.637 3.637 0 0 1-.6-1.205 3.396 3.396 0 0 1-.093-1.39c.062-.48.213-.919.451-1.316a3.538 3.538 0 0 1 2.094-1.604 3.36 3.36 0 0 1 1.388-.096c.48.062.919.214 1.316.452a3.531 3.531 0 0 1 1.606 2.095 3.4 3.4 0 0 1 .093 1.389"></path><path fill-rule="evenodd" d="M60.826 118.601q-.037-.282-.26-.447l-6.857-5.13c-1.831-1.368-3.499-2.058-5-2.068-1.505-.01-2.82.741-3.949 2.252-.252.336-.438.69-.562 1.067a4.095 4.095 0 0 0-.211 1.138c-.017.385.018.762.107 1.13.09.369.224.7.395.998a3.527 3.527 0 0 0-.782-.039 4.22 4.22 0 0 0-.927.153 3.567 3.567 0 0 0-.94.423c-.311.192-.588.45-.828.772-1.06 1.416-1.405 2.807-1.035 4.165.37 1.362 1.515 2.761 3.44 4.202l6.657 4.977a.642.642 0 0 0 .5.126.653.653 0 0 0 .445-.26l9.685-12.96a.648.648 0 0 0 .122-.499zm-7.31-.341l-1.862-1.396c-.335-.248-.654-.32-.954-.21a1.5 1.5 0 0 0-.705.504c-.18.24-.269.522-.271.843 0 .323.151.6.461.83l1.862 1.395 1.47-1.966zm-7.15 4.343c-.161.215-.25.47-.275.764-.023.296.114.555.405.774l1.684 1.26 1.364-1.827-1.682-1.259c-.294-.22-.577-.28-.85-.18a1.358 1.358 0 0 0-.646.468zm-15.378-26.62c-.678.354-1.332.712-1.95 1.072-.955.555-1.714 1.213-2.275 1.975a6.239 6.239 0 0 0-1.117 2.517c-.184.915-.174 1.888.027 2.926.199 1.035.58 2.093 1.142 3.171q.857 1.646 1.949 2.77c.728.75 1.52 1.312 2.373 1.685a6.3 6.3 0 0 0 2.702.528c.948-.023 1.922-.27 2.922-.733.65-.3 1.318-.63 1.998-.985a45.58 45.58 0 0 0 1.91-1.052c.966-.561 1.73-1.22 2.284-1.981a6.077 6.077 0 0 0 1.084-2.497c.168-.909.147-1.871-.066-2.892-.211-1.018-.602-2.074-1.171-3.171-.563-1.08-1.204-2.004-1.922-2.77q-1.077-1.146-2.334-1.72a6.113 6.113 0 0 0-2.669-.545c-.94.02-1.918.265-2.932.74a45.21 45.21 0 0 0-1.955.962zm7.657 6.98c-.138.44-.51.837-1.117 1.189a58.743 58.743 0 0 1-3.73 1.944c-.637.296-1.177.37-1.62.223-.443-.147-.786-.455-1.035-.93-.246-.473-.302-.933-.167-1.38.134-.447.505-.847 1.11-1.199a58.173 58.173 0 0 1 3.731-1.946c.635-.292 1.173-.372 1.614-.234.439.139.784.454 1.04.942.253.489.311.952.174 1.391z"></path><path d="M20 75.42a.647.647 0 0 1 .179-.483.652.652 0 0 1 .467-.222l4.024-.19c.185-.01.344.05.485.176.14.126.215.283.223.465l.194 4.153 11.454-.542a.654.654 0 0 1 .484.178.656.656 0 0 1 .222.466l.238 5.003a.652.652 0 0 1-.178.484.646.646 0 0 1-.466.224l-11.451.542.196 4.153a.647.647 0 0 1-.178.485.642.642 0 0 1-.465.223l-4.024.19a.653.653 0 0 1-.487-.177.652.652 0 0 1-.221-.466L20 75.42zm6.9-23.94a.646.646 0 0 1 .358-.372.638.638 0 0 1 .515-.015l3.761 1.445a.647.647 0 0 1 .372.359.649.649 0 0 1 .017.515l-1.492 3.882 10.703 4.113a.659.659 0 0 1 .372.358.64.64 0 0 1 .015.516l-1.794 4.676a.653.653 0 0 1-.358.373.66.66 0 0 1-.517.016l-10.7-4.115-1.49 3.881a.653.653 0 0 1-.358.373.638.638 0 0 1-.515.015l-3.762-1.445a.646.646 0 0 1-.372-.358.648.648 0 0 1-.017-.516l5.262-13.7zm23.96-9.656a.66.66 0 0 1 .474-.203c.188-.002.35.06.482.189l2.71 2.635a.643.643 0 0 1 .201.476.644.644 0 0 1-.188.48l-8.789 9.055a.642.642 0 0 1-.474.201.65.65 0 0 1-.484-.186L33.195 43.197a.653.653 0 0 1-.203-.475.654.654 0 0 1 .188-.482l3.49-3.592a.645.645 0 0 1 .474-.203.65.65 0 0 1 .482.187l8.4 8.169 4.833-4.977zm17.183-8.2c.17-.07.34-.07.515 0 .176.07.3.19.37.36l1.376 3.253c.072.17.07.341 0 .517a.644.644 0 0 1-.36.369L57.93 43.205a.647.647 0 0 1-.516.002.656.656 0 0 1-.368-.36L50.75 27.944a.639.639 0 0 1-.002-.516.656.656 0 0 1 .358-.37l11.828-5.004a.646.646 0 0 1 .516-.002c.175.07.3.193.37.36l1.376 3.255a.65.65 0 0 1 0 .515.66.66 0 0 1-.36.37l-6.917 2.926.615 1.453 6.41-2.71a.637.637 0 0 1 .514-.002c.176.073.3.19.37.36l1.267 2.998a.652.652 0 0 1 .002.517.654.654 0 0 1-.36.371l-6.41 2.712.615 1.453 7.1-3.006zm13.438-5.103c.047-.482.186-.925.411-1.33.228-.404.513-.75.861-1.034a3.585 3.585 0 0 1 1.184-.633c.44-.14.904-.184 1.384-.137.484.05.924.189 1.33.414.403.226.747.512 1.032.86.284.35.493.743.634 1.184.14.445.186.904.136 1.387a3.51 3.51 0 0 1-1.272 2.362 3.535 3.535 0 0 1-1.184.635 3.419 3.419 0 0 1-1.386.135 3.347 3.347 0 0 1-1.33-.412 3.583 3.583 0 0 1-1.033-.86 3.58 3.58 0 0 1-.633-1.186 3.415 3.415 0 0 1-.134-1.385"></path>
+		</symbol>
+	
+		<symbol id="icon-logo-bg" viewBox="0 0 160 160">
+			<path d="M80 160c44.183 0 80-35.817 80-80S124.183 0 80 0 0 35.817 0 80s35.817 80 80 80z"></path>
+		</symbol>
+	
+		<symbol id="icon-malt" viewBox="0 0 27 59">
+			<path d="M26.087 7.826v10.291a7.828 7.828 0 0 1-3.724 6.666L13.043 30m13.044-2.609v2.61c0 2.716-1.41 5.24-3.724 6.664l-9.32 5.218v-9.13m13.044 6.52v2.61a7.83 7.83 0 0 1-3.724 6.665l-9.32 5.217v-9.13M0 7.826v10.291a7.828 7.828 0 0 0 3.724 6.666L13.044 30M0 27.391v2.61c0 2.716 1.41 5.24 3.724 6.664l9.32 5.218v-9.13M0 39.272v2.61a7.83 7.83 0 0 0 3.724 6.665l9.32 5.217v-9.13"></path><path d="M7.825 20.87c0 5.557 5.217 9.13 5.217 9.13s5.219-3.575 5.219-9.13c0-5.556-5.219-9.13-5.219-9.13s-5.217 3.574-5.217 9.13zM13.043 0v11.74m0 18.26v28.983M6.522 3.913v7.826m13.043-7.826v7.826"></path>
+		</symbol>
+	
+</svg>
+
+    <div class="preloader">
+      <div class="preloader-wrapper">
+        <div class="bottles">
+          <svg class="bottle" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="#icon-bottle"></use>
+          </svg>
+          <svg class="bottle" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="#icon-bottle"></use>
+          </svg>
+          <svg class="bottle" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="#icon-bottle"></use>
+          </svg>
+          <svg class="bottle" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="#icon-bottle"></use>
+          </svg>
+          <svg class="bottle" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="#icon-bottle"></use>
+          </svg>
+          <svg class="bottle" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="#icon-bottle"></use>
+          </svg>
+          <svg class="bottle" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="#icon-bottle"></use>
+          </svg>
+          <svg class="bottle" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="#icon-bottle"></use>
+          </svg>
+          <svg class="bottle" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="#icon-bottle"></use>
+          </svg>
+          <svg class="bottle" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="#icon-bottle"></use>
+          </svg>
+          <svg class="bottle" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="#icon-bottle"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <header class="page-header">
+        <div class="page-header__inner">
+          <div class="logo"><a class="logo__link" href="/">
+              <svg class="logo__icon" xmlns="http://www.w3.org/2000/svg">
+                <use class="logo__background" xlink:href="#icon-logo-bg"></use>
+                <use class="logo__content" xlink:href="#icon-logo"></use>
+              </svg></a></div>
+        </div>
+      </header>
+      <div class="banner"><img class="banner__image" src="img/banner.jpg" alt="Golden Bottle"/>
+        <div class="banner__content container">
+          <p>Ваш шанс выиграть годовой запас пива от GoldenBottle!</p>
+        </div>
+      </div>
+      <div class="content container">
+        <form class="contact-form">
+          <div class="contact-form__line clearfix justify">
+            <div class="contact-form__control">
+              <label for="name">&nbsp;</label>
+              <input id="name" type="text" name="name" placeholder="Имя Фамилия"/>
+            </div>
+            <div class="contact-form__control">
+              <label for="phone">Телефон</label>
+              <input id="phone" type="text" name="phone" placeholder="+7"/>
+            </div>
+            <div class="contact-form__control">
+              <label for="field">&nbsp;</label>
+              <input id="field" type="text" name="field" placeholder="Имя Фамилия"/>
+            </div>
+          </div>
+          <div class="contact-form__line slug">
+            <p>В чем отличие настоящего шотландского стаута от обычного темного пива?</p>
+          </div>
+          <div class="contact-form__line clearfix">
+            <div class="promo tabs">
+              <ul class="promo-icons tabs__caption">
+                <li class="promo-icon">
+                  <label class="promo-icon__item" id="barrel">
+                    <input id="barrel" type="radio" name="question" value="barrel" style="display:none;"/>
+                    <svg class="icon icon--barrel" xmlns="http://www.w3.org/2000/svg">
+                      <use class="icon__content" xlink:href="#icon-barrel"></use>
+                    </svg>
+                    <div class="promo-icon__title">Крепость</div>
+                  </label>
+                </li>
+                <li class="promo-icon">
+                  <label class="promo-icon__item" id="beer">
+                    <input id="beer" type="radio" name="question" value="beer" style="display:none;"/>
+                    <svg class="icon icon--beer" xmlns="http://www.w3.org/2000/svg">
+                      <use class="icon__content" xlink:href="#icon-beer"></use>
+                    </svg>
+                    <div class="promo-icon__title">Вкус</div>
+                  </label>
+                </li>
+                <li class="promo-icon">
+                  <label class="promo-icon__item" id="malt">
+                    <input id="malt" type="radio" name="question" value="malt" style="display:none;"/>
+                    <svg class="icon icon--malt" xmlns="http://www.w3.org/2000/svg">
+                      <use class="icon__content" xlink:href="#icon-malt"></use>
+                    </svg>
+                    <div class="promo-icon__title">Цвет</div>
+                  </label>
+                </li>
+                <li class="promo-icon">
+                  <label class="promo-icon__item" id="ingridients">
+                    <input id="ingridients" type="radio" name="question" value="ingridients" style="display:none;"/>
+                    <svg class="icon icon--ingridients" xmlns="http://www.w3.org/2000/svg">
+                      <use class="icon__content" xlink:href="#icon-ingridients"></use>
+                    </svg>
+                    <div class="promo-icon__title">Ингридиенты</div>
+                  </label>
+                </li>
+                <li class="promo-icon">
+                  <label class="promo-icon__item" id="age">
+                    <input id="age" type="radio" name="question" value="age" style="display:none;"/>
+                    <svg class="icon icon--age" xmlns="http://www.w3.org/2000/svg">
+                      <use class="icon__content" xlink:href="#icon-age"></use>
+                    </svg>
+                    <div class="promo-icon__title">Возраст</div>
+                  </label>
+                </li>
+              </ul>
+              <div class="promo-icon__content tabs__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis nulla fugiat eos nobis debitis ipsam incidunt iste.</div>
+              <div class="promo-icon__content tabs__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam culpa, libero enim ducimus illo sequi autem natus?</div>
+              <div class="promo-icon__content tabs__content">Настоящий солод для шотландского стаута проходит три стадии обработки, после которых вкусовые качества напитка получаются совершенно бесподобными!</div>
+              <div class="promo-icon__content tabs__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eos illum voluptates minima reiciendis nulla voluptas, accusamus.</div>
+              <div class="promo-icon__content tabs__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga minima praesentium vero at, minus sequi dolorem. Corrupti!</div>
+            </div>
+          </div>
+          <div class="contact-form__line">
+            <button class="contact-form__button submit-button is-disabled" disabled="disable">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
